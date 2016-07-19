@@ -67,7 +67,8 @@ Each entry is either:
 (defun spaceros/pre-init-rosemacs ())
 
 (defun spaceros/init-rosemacs ()
-    (use-package rosemacs-config :defer t))
+  (when (getenv "ROS_DISTRO")
+    (use-package rosemacs-config :defer t)))
 
 (defun spaceros/post-init-rosemacs ())
 
