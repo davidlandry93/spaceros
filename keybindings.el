@@ -11,3 +11,5 @@
 (spacemacs/declare-prefix "aRt" "topic")
 (spacemacs/set-leader-keys "aRte" 'echo-ros-topic)
 (spacemacs/set-leader-keys "aRti" 'ros-topic-info)
+
+(spacemacs/set-leader-keys "aRh" 'ros-helm)
