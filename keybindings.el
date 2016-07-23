@@ -13,3 +13,4 @@
 (spacemacs/set-leader-keys "aRti" 'ros-topic-info)
 
 (spacemacs/set-leader-keys "aRh" 'ros-helm)
+(spacemacs/set-leader-keys "aRI" 'ros-helm/invalidate-cache)
