@@ -5,8 +5,8 @@
 (spacemacs/set-leader-keys "aRa" 'find-ros-action)
 (spacemacs/set-leader-keys "aRm" 'find-ros-message)
 
-(spacemacs/set-leader-keys "aRc" 'ros-core)
-(spacemacs/set-leader-keys "aRl" 'ros-launch)
+(spacemacs/set-leader-keys "aRc" 'ros-helm/roscore)
+(spacemacs/set-leader-keys "aRl" 'ros-helm/roslaunch)
 
 (spacemacs/declare-prefix "aRt" "topic")
 (spacemacs/set-leader-keys "aRte" 'echo-ros-topic)
