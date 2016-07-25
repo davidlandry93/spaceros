@@ -56,8 +56,12 @@
 (defun spaceros/init-ros-helm ()
   (when (getenv "ROS_DISTRO")
     (use-package ros-helm
-      :commands ros-helm)))
+      :commands ros-helm
+      :config (evilified-state-evilify-map
+                ros-node-mode-map
+                :mode ros-node-mode))))
 
 (defun spaceros/post-init-helm-ros ())
+
 
 ;;; packages.el ends here
