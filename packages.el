@@ -35,7 +35,8 @@
               (recipe
                :fetcher github
                :repo "davidlandry93/ros_emacs_utils"
-               :files ("rosemacs" "rosemacs/*")))
+               :files ("rosemacs" "rosemacs/*"))
+              :disabled t)
     (ros-helm :location local))
   "The list of Lisp packages required by the spaceros layer.")
 
@@ -58,8 +59,9 @@
     (use-package ros-helm
       :commands ros-helm
       :config (evilified-state-evilify-map
-                ros-node-mode-map
-                :mode ros-node-mode))))
+                ros-process-mode-map
+                :mode ros-process-mode
+                :eval-after-load ros-process-mode))))
 
 (defun spaceros/post-init-helm-ros ())
 
