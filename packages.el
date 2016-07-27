@@ -36,7 +36,7 @@
                :fetcher github
                :repo "davidlandry93/ros_emacs_utils"
                :files ("rosemacs" "rosemacs/*"))
-              :disabled t)
+              :excluded t)
     (ros-helm :location local))
   "The list of Lisp packages required by the spaceros layer.")
 
