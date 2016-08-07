@@ -37,7 +37,7 @@
                :repo "davidlandry93/ros_emacs_utils"
                :files ("rosemacs" "rosemacs/*"))
               :excluded t)
-    (ros-helm :location local))
+    (helm-ros :location local))
   "The list of Lisp packages required by the spaceros layer.")
 
 ;; Init rosemacs
@@ -57,6 +57,7 @@
 (defun spaceros/init-ros-helm ()
   (when (getenv "ROS_DISTRO")
     (use-package ros-helm
+      :mode ("\\.launch\\'" . nxml-mode)
       :commands ros-helm
       :config (evilified-state-evilify-map
                 ros-process-mode-map
