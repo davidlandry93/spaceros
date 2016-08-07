@@ -50,19 +50,23 @@
 
 (defun spaceros/post-init-rosemacs ())
 
-;; Init ros-helm
+;; Init helm-ros
 
 (defun spaceros/pre-init-helm-ros ())
 
-(defun spaceros/init-ros-helm ()
+(defun spaceros/init-helm-ros ()
   (when (getenv "ROS_DISTRO")
-    (use-package ros-helm
+    (use-package helm-ros
       :mode ("\\.launch\\'" . nxml-mode)
-      :commands ros-helm
-      :config (evilified-state-evilify-map
-                ros-process-mode-map
-                :mode ros-process-mode
-                :eval-after-load ros-process-mode))))
+      :commands (helm-ros
+                 helm-ros-roscore
+                 helm-ros-invalidate-cache
+                 ros-process-mode
+                 )
+      :config (progn
+                (evilified-state-evilify-map
+                  ros-process-mode-map
+                  :mode ros-process-mode)))))
 
 (defun spaceros/post-init-helm-ros ())
 
