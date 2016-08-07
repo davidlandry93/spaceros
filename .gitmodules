@@ -1,6 +1,3 @@
-[submodule "local/ros-helm"]
-	path = local/ros-helm
-	url = git@github.com:davidlandry93/ros-helm
 [submodule "local/helm-ros"]
 	path = local/helm-ros
 	url = git@github.com:davidlandry93/helm-ros
